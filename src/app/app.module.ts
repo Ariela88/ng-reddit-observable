@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { ListComponent } from './components/list/list.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ListComponent } from './components/list/list.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    ListComponent
+    ListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
