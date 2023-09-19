@@ -13,7 +13,7 @@ export class RedditService {
 
   getRedditPosts() {
 
-    return this.http.get<Post>('https://www.reddit.com/r/italy/new.json').pipe(
+    return this.http.get<Post>('https://www.reddit.com/r/italia/new.json').pipe(
 
       tap(redditObject => console.log(redditObject)),
       map((redditObject: any) => redditObject.data),

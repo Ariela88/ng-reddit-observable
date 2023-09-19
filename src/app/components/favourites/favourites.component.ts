@@ -9,12 +9,25 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class FavouritesComponent {
 
-  favouritesArray: Post[] = []
+
+
+  favourites: Post[] = [];
+
+
 
   constructor(public storage: StorageService) { }
 
 
+  ngOnInit(): void {
 
+    this.storage.favouritesSubject.subscribe(arrayOfFavourites => {
+      this.favourites = arrayOfFavourites;
+      this.favourites.sort((f1,f2)=>f2.created_utc - f1.created_utc)
+
+    })
+
+
+  }
 
 
 

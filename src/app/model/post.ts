@@ -3,7 +3,7 @@ export interface Post {
   id: string;
   author: string;
   title: string;
-  created: number;
+  created_utc: number;
   url: string;
   permalink: string;
   thumbnail: string;

@@ -12,6 +12,8 @@ import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/card/card.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 
+import { TimestampToDatePipe } from './pipes/timestamp-to-date.pipe';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
     MainComponent,
     ListComponent,
     CardComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    TimestampToDatePipe
   ],
   imports: [
     BrowserModule,

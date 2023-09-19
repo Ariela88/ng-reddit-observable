@@ -1,10 +1,10 @@
 
 <header>
-  <h1> Reddit </h1>
+  <h1> reddit </h1>
   <nav class="button-head-cont">
   <a routerLink="./home">Home</a>
   <span></span>
-  <a routerLink="./favourites">Preferiti({{storage.favourites.length}})</a>
+  <a routerLink="./favourites">Preferiti({{(storage.favouritesSubject | async)!.length}})</a>
 
  </nav>
 </header>
