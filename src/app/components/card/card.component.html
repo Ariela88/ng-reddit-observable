@@ -2,8 +2,8 @@
   <span *ngIf="isFavourites">★</span>
   <img class="post-image" src="{{postData.thumbnail.includes('http')? postData.thumbnail : './assets/thumb.png'}}" alt="post thumbnail">
   <div class="post-text">
-    <span>{{postData.title | uppercase}}</span>
-    <span><a target="_blank"  href="{{'https://www.reddit.com/user/'+ postData.author}}">{{postData.author}}</a></span>
+    <span>{{postData.title}}</span>
+    <span><a target="_blank"  href="{{'https://www.reddit.com/user/'+ postData.author}}">{{postData.author  | capitalize}}</a></span>
     <span>{{postData.created_utc | timestampToDate : true | uppercase}}</span>
   </div>
   <div class="spacer"></div>
