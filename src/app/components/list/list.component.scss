@@ -1,42 +1,6 @@
-.card{
-  display: flex;
-  border: 1px solid grey;
-  padding: 8px;
-  justify-content: space-between;
-  gap: 4px;
-}
-
-.post-image{
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
-
-}
-
-.post-text{
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.button-container{
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-
 
 li{
   list-style: none;
   margin-bottom: 4px;
 
-}
-
-ul{
-  padding-left: 0;
-}
-
-.spacer{
-  flex-grow: 1;
 }

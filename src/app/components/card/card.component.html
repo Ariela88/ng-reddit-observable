@@ -1,1 +1,18 @@
-<p>card works!</p>
+<div class="card" *ngIf="postData">
+  <img class="post-image" src="{{postData.thumbnail.includes('http')? postData.thumbnail : './assets/thumb.png'}}" alt="post thumbnail">
+  <div class="post-text">
+    <span>{{postData.title}}</span>
+    <span>{{postData.author}}</span>
+    <span>{{postData.created}}</span>
+  </div>
+  <div class="spacer"></div>
+  <div class="buttons-container">
+    <button (click)="storage.toggleFavourites(postData)">{{storage.isFavourite(postData)?'rimuovi':'salva'}}</button>
+    <a href="{{postData.url}}">
+      <button>Vai al Link</button>
+    </a>
+    <a href="{{'https://www.reddit.com/'+ postData.permalink}}">
+      <button>Vai al Reddit</button>
+    </a>
+  </div>
+</div>
