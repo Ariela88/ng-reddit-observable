@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/model/post';
 import { RedditService } from 'src/app/services/reddit.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 
 @Component({
@@ -11,10 +12,18 @@ import { RedditService } from 'src/app/services/reddit.service';
 export class ListComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private reddit: RedditService) {}
+  constructor(private reddit: RedditService,private storage:StorageService) {}
 
   ngOnInit(): void {
-    this.reddit.getRedditPosts().subscribe(childrenData => this.posts = childrenData);
+    this.reddit.getRedditPosts().subscribe(childrenData => {
+      this.posts = childrenData;
+      for (const post of this.posts) {
+        post.isFavourite = this.storage.isFavourite(post)
+
+        //con questo ciclo, controllo solo quando carico i post se la condizione è true o false, richiamando la funzione dallo storage
+
+      }
+    });
   }
 
 }

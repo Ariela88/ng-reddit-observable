@@ -11,6 +11,8 @@ export class CardComponent {
 
 
   @Input() postData?:Post;
+  @Input() isFavourites:boolean = false
+  @Input() backgroundColor:string ='white'
 
 
   constructor( public storage:StorageService){}

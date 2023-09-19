@@ -7,5 +7,6 @@ export interface Post {
   url: string;
   permalink: string;
   thumbnail: string;
+  isFavourite?:boolean;
 
 }

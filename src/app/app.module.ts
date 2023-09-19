@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/card/card.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CardComponent } from './components/card/card.component';
     FooterComponent,
     MainComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
